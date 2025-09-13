@@ -60,6 +60,6 @@ The program exposed me to core technologies, advanced concepts, and best practic
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 
 The **ProDev Frontend Engineering program** provided me with the technical skills and problem-solving mindset required to thrive as a frontend engineer. Beyond just coding, I learned the importance of design systems, planning, and communication—skills that will continue to guide my growth as I build impactful projects in the real world.
