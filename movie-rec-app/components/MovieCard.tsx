@@ -17,11 +17,11 @@ const Poster = styled.img`
   aspect-ratio: 2/3;
   object-fit: cover;
 `;
-const Content = styled.div` padding: 12px 14px; `;
+const Content = styled.div`padding: 12px 14px; `;
 const TitleRow = styled.div` display: flex; align-items: center; justify-content: space-between; gap: 8px; `;
 const Title = styled.h3` font-size: 14px; margin: 0; color: ${({ theme }) => theme.colors.text}; `;
 const FavBtn = styled.button`
-  background: transparent; border: 1px solid ${({ theme }) => theme.colors.muted}; color: ${({ theme }) => theme.colors.muted};
+  background: transparent; border: 0px solid ${({ theme }) => theme.colors.muted}; color: ${({ theme }) => theme.colors.muted};
   border-radius: 999px; padding: 4px 8px; cursor: pointer; font-size: 12px;
   &:hover { border-color: ${({ theme }) => theme.colors.primary}; color: ${({ theme }) => theme.colors.primary}; }
 `;
@@ -43,7 +43,7 @@ export function MovieCard({ movie }: Props) {
         <TitleRow>
           <Title>{title}</Title>
           <FavBtn onClick={() => toggleFavorite(movie.id)} aria-pressed={fav}>
-            {fav ? "★ Favorited" : "☆ Favorite"}
+            {fav ? "❤️" : "🖤"}
           </FavBtn>
         </TitleRow>
       </Content>

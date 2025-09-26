@@ -6,8 +6,8 @@ import type { TmdbMovie } from "@/lib/tmdb";
 const Grid = styled.section`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  padding: 16px;
+  gap: 24px;
+  padding: 55px 0px;
   max-width: 1200px;
   margin: 0 auto;
   @media (min-width: 768px) { grid-template-columns: repeat(3, 1fr); }
@@ -43,7 +43,6 @@ export default function Home() {
 
   return (
     <>
-      <Heading>Trending Movies</Heading>
       <Grid>
         {trending.map((m) => (
           <MovieCard key={m.id} movie={m} />
