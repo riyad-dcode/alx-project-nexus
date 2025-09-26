@@ -2,6 +2,8 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { FavoritesProvider } from "@/context/FavoritesContext";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -28,7 +30,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <FavoritesProvider>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </FavoritesProvider>
     </ThemeProvider>
   );
