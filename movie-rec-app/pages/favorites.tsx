@@ -6,7 +6,12 @@ import type { TmdbMovie } from "@/lib/tmdb";
 
 const Heading = styled.h1` font-size: 22px; margin: 16px; color: ${({ theme }) => theme.colors.text}; `;
 const Grid = styled.section`
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 16px; max-width: 1200px; margin: 0 auto;
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 24px; 
+  padding: 50px 10px; 
+  max-width: 1500px; 
+  margin: 0 auto;
   @media (min-width: 768px) { grid-template-columns: repeat(3, 1fr); }
   @media (min-width: 1024px) { grid-template-columns: repeat(5, 1fr); }
   padding: 55px 0px;
@@ -42,13 +47,16 @@ export default function FavoritesPage() {
     load();
   }, [favorites]);
 
-  if (loading) return <Heading>Loading favourites…</Heading>;
-  if (error) return <Heading>Error: {error}</Heading>;
-  if (favorites.length === 0) return <Empty>No favourites yet.</Empty>;
+  // if (loading) return <Heading>Loading favourites…</Heading>;
+  // if (error) return <Heading>Error: {error}</Heading>;
+  // if (favorites.length === 0) return <Empty>No favourites yet.</Empty>;
 
   return (
     <>
       <Grid>
+        {(loading) && <Heading>Loading favourites…</Heading>}
+        {(error) && <Heading>Error: {error}</Heading>}
+        {(favorites.length === 0) && <Empty>No favourites yet.</Empty>}
         {movies.map((m) => <MovieCard key={m.id} movie={m} />)}
       </Grid>
     </>

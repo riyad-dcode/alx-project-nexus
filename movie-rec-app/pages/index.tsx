@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MovieCard } from "@/components/MovieCard";
+import { HeroSlider } from "@/components/HeroSlider";
 import type { TmdbMovie } from "@/lib/tmdb";
 
 const Grid = styled.section`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-  padding: 55px 0px;
-  max-width: 1200px;
+  padding: 50px 10px;
+  max-width: 1500px;
   margin: 0 auto;
   @media (min-width: 768px) { grid-template-columns: repeat(3, 1fr); }
   @media (min-width: 1024px) { grid-template-columns: repeat(5, 1fr); }
 `;
 const Heading = styled.h1` font-size: 22px; margin: 16px; color: ${({ theme }) => theme.colors.text}; `;
+
 
 export default function Home() {
   const [trending, setTrending] = useState<TmdbMovie[]>([]);
@@ -38,13 +40,15 @@ export default function Home() {
     load();
   }, []);
 
-  if (loading) return <Heading>Loading trending…</Heading>;
-  if (error) return <Heading>Error: {error}</Heading>;
+  
 
   return (
     <>
+      <HeroSlider movies={trending} loading={loading} />
       <Grid>
-        {trending.map((m) => (
+        {loading && <Heading>Loading trending…</Heading>}
+        {error && <Heading>Error: {error}</Heading>}
+        {!loading && !error && trending.map((m) => (
           <MovieCard key={m.id} movie={m} />
         ))}
       </Grid>
