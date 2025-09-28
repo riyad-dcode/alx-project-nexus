@@ -1,40 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+#  Movie Recommendation Web App
+
+A real-world style movie recommendation platform where users can browse trending movies, view detailed information via dynamic routing, and receive personalized recommendations by saving favorites locally.
+
+**This project demonstrates modern frontend engineering practices using Next.js, TypeScript, Styled Components, and real API integration to deliver an engaging, interactive user experience.**
+
+---
+
+## Project Overview
+
+The Movie Recommendation Web App combines dynamic routing, local data storage, and interactive UI design to provide a complete, responsive movie discovery platform.
+
+### Users can:
+
+- *Browse trending movies fetched from a public movie API.*
+
+- *View detailed pages for each movie using Next.js page routing.*
+
+- *Save and view their favorite movies locally (via local storage) for a personalized dashboard.*
+
+- *Enjoy a responsive and animated UI with smooth navigation and transitions.*
+
+---
+
+## Project Goals
+
+- *Dynamic Routing*
+
+- *Implement detailed movie pages using Next.js dynamic routing.*
+
+- *User Personalization*
+
+- *Enable users to save and manage favorite movies via local storage or API.*
+
+- *Interactive Dashboard*
+
+- *Create a responsive, visually appealing dashboard featuring trending and recommended movies.*
+
+---
+
+## Technologies Used
+
+- *Next.js* – Server-side rendering, routing, and performance optimizations.
+
+- *React* – Component-based UI development.
+
+- *TypeScript* – Strong typing and scalable code structure.
+
+- *Styled Components* – Scoped, reusable styling for UI consistency.
+
+- *TMDB Movie API* – Public API for fetching trending and recommended movie data.
+
+---
+
+## Key Features
+
+### 1. API Integration
+
+Fetch trending and recommended movies from a public movie API.
+
+### Handle loading states and error messages gracefully.
+
+### 2. Dynamic Routing
+
+Each movie has a dedicated detail page generated via Next.js page routing.
+
+Optimized server-side rendering ensures fast and SEO-friendly navigation.
+
+### 3. Save Favorite Movies
+
+Users can save favorites locally (local storage) or connect to a backend API.
+
+Dedicated favorites section on the dashboard for quick access.
+
+### 4. Responsive & Interactive UI
+
+Movie dashboard with trending and recommended categories.
+
+Hover effects, animations, and transitions for engaging interactions.
+
+Fully responsive design across mobile, tablet, and desktop.
+
+---
+
+## Implementation Process
+
+The project follows a Git commit workflow for structured development:
+
+### Initial Setup
+feat: initialize Next.js project with TypeScript  
+feat: integrate movie API for fetching data  
+
+### Feature Development
+feat: implement detailed movie pages with dynamic routing  
+feat: add functionality to save favorite movies  
+
+### UI Enhancements
+style: design UI using Styled Components  
+
+### Bug Fixes
+fix: resolve rendering issues on dynamic pages  
+
+### Documentation
+docs: add API setup and usage instructions  
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+git clone https://github.com/riyad-dcode/alx-project-nexus.git
+cd movie-rec-app
 
-```bash
+### 2. Install Dependencies
+npm install
+
+### 3. Set Up Environment Variables
+Create a .env.local file in the root directory and add your API key:
+
+NEXT_PUBLIC_MOVIE_API_KEY=your_api_key_here
+NEXT_PUBLIC_MOVIE_API_URL=https://api.themoviedb.org/3
+
+### 4. Run the Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000 to view the app.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+--- 
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Preview
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+[App Screenshot](./public/screenshot.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
