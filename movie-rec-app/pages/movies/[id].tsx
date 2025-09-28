@@ -4,18 +4,33 @@ import styled from "styled-components";
 import type { TmdbMovie } from "@/lib/tmdb";
 import { MovieCard } from "@/components/MovieCard";
 
-const Wrap = styled.div` max-width: 1100px; margin: 0 auto; padding: 55px 0px; display: grid; gap: 16px; `;
-const Title = styled.h1` font-size: 24px; margin: 0; color: ${({ theme }) => theme.colors.text}; `;
+const Wrap = styled.div` 
+    max-width: 1500px; 
+    margin: 0 auto; 
+    padding: 55px 10px; 
+    display: grid; 
+    gap: 16px; 
+`;
+
+const Title = styled.h1` 
+    font-size: 24px; 
+    margin: 0; 
+    color: ${({ theme }) => theme.colors.text}; 
+`;
+
 const Row = styled.div`
   display: grid; grid-template-columns: 1fr; gap: 16px;
   @media (min-width: 900px) { grid-template-columns: 320px 1fr; }
 `;
 const Poster = styled.img` width: 100%; border-radius: ${({ theme }) => theme.radii.md}; `;
+
 const Overview = styled.p` color: ${({ theme }) => theme.colors.muted}; line-height: 1.6; `;
+
 const Sub = styled.h2` font-size: 18px; margin: 12px 0; color: ${({ theme }) => theme.colors.text}; `;
+
 const Grid = styled.div`
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-  @media (min-width: 768px) { grid-template-columns: repeat(4, 1fr); }
+  @media (min-width: 768px) { grid-template-columns: repeat(5, 1fr); }
 `;
 
 export default function MovieDetail() {

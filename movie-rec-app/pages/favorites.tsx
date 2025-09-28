@@ -14,7 +14,6 @@ const Grid = styled.section`
   margin: 0 auto;
   @media (min-width: 768px) { grid-template-columns: repeat(3, 1fr); }
   @media (min-width: 1024px) { grid-template-columns: repeat(5, 1fr); }
-  padding: 55px 0px;
 `;
 const Empty = styled.p` color: ${({ theme }) => theme.colors.muted}; margin: 16px; `;
 
@@ -46,10 +45,6 @@ export default function FavoritesPage() {
     };
     load();
   }, [favorites]);
-
-  // if (loading) return <Heading>Loading favourites…</Heading>;
-  // if (error) return <Heading>Error: {error}</Heading>;
-  // if (favorites.length === 0) return <Empty>No favourites yet.</Empty>;
 
   return (
     <>

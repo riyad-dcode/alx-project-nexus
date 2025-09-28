@@ -12,3 +12,4 @@ declare module "styled-components" {
     radii: { sm: string; md: string; lg: string };
     shadow: { sm: string };
   }
+};

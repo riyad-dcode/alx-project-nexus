@@ -19,7 +19,7 @@ const Title = styled.span`
 const Nav = styled.nav<{ $isOpen: boolean }>`
   display: flex; align-items: center; gap: 55px;
   a { color: ${({ theme }) => theme.colors.muted}; text-decoration: none; }
-  a:hover { color: ${({ theme }) => theme.colors.primary}; }
+  a:hover { rgb(255, 255, 255); }
 
   @media (max-width: 768px) {
     position: fixed;

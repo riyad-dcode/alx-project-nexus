@@ -48,7 +48,10 @@ const SlideContent = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 60px 40px;
+  padding: 60px 100px;
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
   color: white;
   z-index: 2;
   animation: ${fadeIn} 1.2s ease-out 0.3s both;
@@ -89,20 +92,20 @@ const MovieOverview = styled.p`
 
 const CTAButton = styled(Link)`
   display: inline-block;
-  background: ${({ theme }) => theme.colors.primary};
+  background: rgb(13, 27, 38);
   color: white;
   padding: 15px 30px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(77, 171, 247, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.64);
   
   &:hover {
-    background: #339af0;
+    background:rgb(13, 27, 38);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(77, 171, 247, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.64);
   }
 `;
 
