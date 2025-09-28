@@ -22,7 +22,9 @@ const HeroContainer = styled.section`
   margin-bottom: 40px;
 `;
 
-const Slide = styled.div<{ $isActive: boolean }>`
+
+
+const Slide = styled.div<{ $isActive: boolean; $backgroundImage: string }>`
   position: absolute;
   top: 0;
   left: 0;
